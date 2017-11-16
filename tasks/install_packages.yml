@@ -12,5 +12,5 @@
     name: "{{ item }}"
     state: present
   sudo: true
-  with_items: rvm.required_packages
+  with_items: "{{ rvm.required_packages }}"
   when: ansible_os_family == "Debian"
